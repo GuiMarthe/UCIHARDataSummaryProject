@@ -67,6 +67,6 @@ library(data.table)
   
   avg.dataset <<- dataset %>% group_by(subject, activity) %>% summarise_each(funs(mean))
   
-  write.table(avg.dataset, file = "./tidy_dataset.txt")
+  write.table(avg.dataset, file = "./tidy_dataset.txt", row.names = FALSE)
   
 
